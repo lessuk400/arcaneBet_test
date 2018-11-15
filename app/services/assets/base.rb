@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Assets
-  class Base < Callable
+  class Base < ::Callable
     ROOT = 'pages'
 
     mandatory_methods :path

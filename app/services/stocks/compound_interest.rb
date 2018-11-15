@@ -29,7 +29,7 @@ module Stocks
 
     def update_principal
       @update_principal ||= unit_price
-      @update_principal *=  percent_multiplier
+      @update_principal  *= percent_multiplier
     end
 
     def compound!(principal, index)

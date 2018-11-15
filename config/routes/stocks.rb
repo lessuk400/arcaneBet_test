@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :stocks, except: [:edit, :update]
+  resources :stocks, except: %i[edit update]
 end
