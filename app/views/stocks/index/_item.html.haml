@@ -1,0 +1,13 @@
+%tr
+  %td.text-center= item.id
+  %td
+    = link_to item.name, stock_path(item)
+  %td= item.unit_price
+  %td= item.humanized_interest
+  %td= item.duration
+  %td.td-actions.text-center
+    = link_to stock_path(item), class: 'mr-2 show-link' do
+      %i.fa.fa-search
+
+    = link_to stock_path(item), class: 'delete-link', method: :delete do
+      %i.fas.fa-trash-alt

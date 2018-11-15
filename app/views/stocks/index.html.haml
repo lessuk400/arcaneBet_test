@@ -1,0 +1,9 @@
+.container
+  .row
+    .col-md-8
+      %h4
+    .col-md-4
+      = button_to 'Add new stock', new_stock_path, method: :get, class: 'btn btn-secondary'
+      %br
+
+    = render 'stocks/index/table', stocks: @facade.stocks if @facade.stocks
