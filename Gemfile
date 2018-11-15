@@ -20,6 +20,7 @@ gem 'chartkick'
 gem 'pagy'
 gem 'draper'
 gem 'rails-routes'
+gem 'smart_init'
 
 group :development, :test do
   gem 'brakeman', require: false
