@@ -8,6 +8,8 @@ module Stocks
     DEFAULT_PAGE = 1
     OFFSET       = 1
 
+    delegate :email, to: :user, prefix: true, allow_nil: true
+
     def initialize(params:, user:)
       @params = params
       @user   = user
@@ -23,10 +25,6 @@ module Stocks
 
     def page_counter
       PER_PAGE * (page.to_i - 1) + OFFSET
-    end
-
-    def account_info
-      user.decorate.short_info
     end
 
     private

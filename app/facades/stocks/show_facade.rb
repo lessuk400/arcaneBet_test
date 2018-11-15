@@ -9,10 +9,6 @@ module Stocks
       @stock_id = stock_id
     end
 
-    def stock
-      @stock ||= find_stock&.decorate
-    end
-
     def chart_params
       ::Stocks::CompoundInterest.call(stock_id: stock.id)
     end
@@ -23,6 +19,10 @@ module Stocks
 
     def find_stock
       @find_stock ||= Stock.find_by(id: stock_id)
+    end
+
+    def stock
+      @stock ||= find_stock&.decorate
     end
   end
 end
