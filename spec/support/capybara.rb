@@ -13,6 +13,8 @@ selenium_flags        = %W[
 options = Selenium::WebDriver::Chrome::Options.new
 selenium_flags.each { |flag| options.add_argument(flag) }
 
+Capybara.server = :webrick
+
 Capybara.register_driver :headless_chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end

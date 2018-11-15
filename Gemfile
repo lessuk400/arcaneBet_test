@@ -5,7 +5,7 @@ ruby ENV.fetch('CIRCLE_CI_RUBY_VERSION', '2.5.0')
 
 gem 'rails', '~> 5.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 3.11'
+gem 'falcon'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
