@@ -25,6 +25,10 @@ module Stocks
       PER_PAGE * (page.to_i - 1) + OFFSET
     end
 
+    def account_info
+      user.decorate.short_info
+    end
+
     private
 
     attr_reader :user, :params

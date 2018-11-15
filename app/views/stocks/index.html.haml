@@ -1,7 +1,9 @@
 .container
   .row
-    .col-md-8
+    .col-md-2
       %h4
+    .col-md-6
+      %h4.account_info=t('stocks.index.account', account: @facade.account_info)
     .col-md-4
       = button_to 'Add new stock', new_stock_path, method: :get, class: 'btn btn-secondary'
       %br

@@ -2,7 +2,7 @@
   #accordion
     .card-header
       %a.card-link{ 'data-toggle': 'collapse', href: '#collapseSecond' }
-        %h6.card-subtitle.mb-2.text-= facade.stock_name
+        %h5.card-subtitle.mb-2.text-center= facade.stock_name
     #collapseSECOND.collapse.show{ 'data-parent': '#accordion' }
       .card-body
         %table.table.table-hover.group.table-striped

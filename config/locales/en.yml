@@ -22,6 +22,7 @@ en:
       actions:              Actions
       your_stocks:          Your Stocks
       successfully_deleted: Successfully deleted
+      account:              'Account: %{account}'
 
     create:
       successfully_created: Stock saved
