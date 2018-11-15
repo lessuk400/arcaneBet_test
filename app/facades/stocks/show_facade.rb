@@ -13,6 +13,10 @@ module Stocks
       @stock ||= find_stock&.decorate
     end
 
+    def chart_params
+      ::Stocks::CompoundInterest.call(stock_id: stock.id)
+    end
+
     private
 
     attr_reader :stock_id
