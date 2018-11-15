@@ -6,7 +6,7 @@
       = button_to 'Add new stock', new_stock_path, method: :get, class: 'btn btn-secondary'
       %br
 
-    = render 'stocks/index/table', stocks: @facade.stocks if @facade.stocks
+    = render 'stocks/index/table', stocks: @facade.stocks, facade: @facade if @facade.stocks
 
   .row.justify-content-center
     = render 'pagy/nav', pagy: @facade.pagination

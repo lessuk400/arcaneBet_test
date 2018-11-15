@@ -10,5 +10,5 @@
           %th= t('records.stock.properties.duration')
           %th.text-center= t('stocks.index.actions')
       %tbody
-        - stocks.each.with_index(@facade.page_counter) do |item, index|
+        - stocks.each.with_index(facade.page_counter) do |item, index|
           = render partial: 'stocks/index/item', locals: { item: item, index: index }
