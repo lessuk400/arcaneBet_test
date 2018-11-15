@@ -13,4 +13,4 @@ RUN yarn
 
 COPY . .
 
-CMD puma -C config/puma.rb
+CMD falcon serve -c config.ru --bind http://0.0.0.0:3000
