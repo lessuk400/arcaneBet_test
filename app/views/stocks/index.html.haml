@@ -7,3 +7,6 @@
       %br
 
     = render 'stocks/index/table', stocks: @facade.stocks if @facade.stocks
+
+  .row.justify-content-center
+    = render 'pagy/nav', pagy: @facade.pagination
