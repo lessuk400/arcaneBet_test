@@ -21,6 +21,7 @@ gem 'simple_form'
 gem 'chartkick'
 gem 'pagy'
 gem 'draper'
+gem 'rails-routes'
 
 group :development, :test do
   gem 'brakeman', require: false
