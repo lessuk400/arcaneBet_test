@@ -87,13 +87,6 @@ GEM
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
     coderay (1.1.2)
-    coffee-rails (4.2.2)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     database_cleaner (1.7.0)
@@ -156,9 +149,6 @@ GEM
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
     jaro_winkler (1.5.1)
-    jbuilder (2.7.0)
-      activesupport (>= 4.2.0)
-      multi_json (>= 1.2)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.1.5)
@@ -180,7 +170,6 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     msgpack (1.2.4)
-    multi_json (1.13.1)
     nio4r (2.3.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
@@ -344,7 +333,6 @@ DEPENDENCIES
   capybara-screenshot
   chartkick
   chromedriver-helper
-  coffee-rails (~> 4.2)
   database_cleaner
   devise
   dotenv-rails
@@ -353,7 +341,6 @@ DEPENDENCIES
   faker
   falcon
   haml-rails (~> 1.0)
-  jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pagy
   pg (>= 0.18, < 2.0)
