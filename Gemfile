@@ -29,6 +29,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-rails'
   gem 'rails_best_practices'
+  gem 'bundler-audit'
 end
 
 group :development do
