@@ -24,4 +24,6 @@ class Stock < ApplicationRecord
 
   validates :duration, presence:     true,
                        numericality: { greater_than: MIN_YEARS, less_than_or_equal_to: MAX_YEARS }
+
+  scope :in_historic_for_user, ->(user_id) { where(user_id: user_id).order(created_at: :desc) }
 end

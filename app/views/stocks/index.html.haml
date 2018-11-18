@@ -1,14 +1,48 @@
-.container
-  .row
-    .col-md-2
-      %h4
-    .col-md-6
-      %h4.account_info=t('stocks.index.account', account: @facade.user_email)
-    .col-md-4
-      = button_to 'Add new stock', new_stock_path, method: :get, class: 'btn btn-secondary'
-      %br
+#wrapper
+  #content-wrapper
+    .container-fluid
+      / Breadcrumbs
+      %ol.breadcrumb
+        %li.breadcrumb-item
+          %a{href: '#'} Dashboard
+        %li.breadcrumb-item.active Overview
+      / Icon Cards
+      .row
+        .col-xl-3.col-sm-6.mb-3
+          = link_to new_stock_path do
+            .card.text-white.bg-primary.o-hidden.h-100
+              .card-body
+                .card-body-icon
+                  %i.fas.fa-plus-circle
+                .mr-5= t('stocks.index.create_stock')
+      / Area Chart Example
+      - if @facade.stocks.any?
+        .card.mb-3
+          .card-header
+            %i.fas.fa-chart-area
+            = link_to t('home.index.last_stock'), stock_path(@facade.first_stock)
 
-    = render 'stocks/index/table', stocks: @facade.stocks, facade: @facade if @facade.stocks
+          = render 'stocks/index/chart', chart_params: @facade.first_stock_chart_params
 
-  .row.justify-content-center
-    = render 'pagy/nav', pagy: @facade.pagination
+          .card-footer.small.text-muted= t('stocks.index.last_update', date: @facade.last_update)
+        / DataTables Example
+        .card.mb-3
+          .card-header
+            %i.fas.fa-table
+            = t('stocks.index.your_stocks')
+
+          = render 'stocks/index/table', facade: @facade if @facade.stocks
+
+          .card-footer.small.text-muted= t('stocks.index.last_update', date: @facade.last_update)
+
+#logoutModal.modal.fade{ 'aria-hidden': 'true', 'aria-labelledby': 'exampleModalLabel', role: 'dialog', tabindex: '-1' }
+  .modal-dialog{ role: 'document' }
+    .modal-content
+      .modal-header
+        %h5#exampleModalLabel.modal-title= t('modal.logout.ready_to_leave')
+        %button.close{ 'aria-label': 'Close', 'data-dismiss': 'modal', type: 'button' }
+          %span{'aria-hidden': 'true'} ×
+      .modal-body= t('modal.logout.logout')
+      .modal-footer
+        %button.btn.btn-secondary{ 'data-dismiss': 'modal', type: 'button' }= t('modal.logout.cancel')
+        = link_to t('layouts.navbar.log_out'), destroy_user_session_path, method: :delete, class: 'btn btn-primary'

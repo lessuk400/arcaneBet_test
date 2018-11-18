@@ -30,14 +30,20 @@ feature 'Stocks #index', js: true do
       end
     end
 
+    scenario 'shows the chart for stock' do
+      expect(page).to have_css('#chart')
+    end
+
     scenario 'shows sign out page' do
-      expect(page).to have_link('Log out', href: '/users/sign_out')
+      find('#userDropdown').click
+
+      expect(page).to have_link('Log out')
     end
   end
 
   context 'when user is not signed in' do
     scenario 'does not show sign out page' do
-      expect(page).to have_no_link('Log out', href: '/users/sign_out')
+      expect(page).to have_no_css('#userDropdown')
     end
   end
 end

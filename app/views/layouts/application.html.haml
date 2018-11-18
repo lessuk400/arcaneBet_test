@@ -4,7 +4,9 @@
   %head
     %title= yield(:title).presence || page_title
 
-    = stylesheet_link_tag 'application'
+    = favicon_link_tag 'favicon.ico'
+
+    = stylesheet_link_tag 'application', media: :all
     = stylesheet_pack_tag 'main'
 
     = controller_stylesheet_link_tag

@@ -1,243 +1,244 @@
-.content {
-  a {
-    color: #3e3947 !important;
-    text-decoration: none;
-  }
+/*!
+ * Start Bootstrap - SB Admin v5.0.2 (https://startbootstrap.com/template-overviews/sb-admin)
+ * Copyright 2013-2018 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)
+ */
 
-  a:hover {
-    color: #89229b !important;
-    text-decoration: none !important;
-  }
-  a:focus {
-    color: #89229b !important;
-    text-decoration: none !important;
-  }
-  .container h3 {
-    font-size: 25px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-weight: 300;
-    color: #3c4858;
-  }
-  .container h4 {
-    font-size: 18px;
-    line-height: 1.5;
-    margin: 10px 0;
-    font-weight: 300;
-    color: #3c4858;
-  }
+html {
+  position: relative;
+  min-height: 100%;
+}
 
-  small {
-    font-size: 75% !important;
-    color: #777;
-  }
+body {
+  height: 100%;
+}
 
-  .table {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 16px;
-    background-color: transparent;
-  }
+#wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
-  .table thead tr th {
-    font-size: 17px;
-    font-weight: 300;
-  }
+#wrapper #content-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 80px;
+}
 
-  .table > thead > tr > th {
-    padding: 12px 8px;
-    vertical-align: middle;
-    border-color: #ddd;
-    font-weight: 300;
-  }
+body.fixed-nav #content-wrapper {
+  margin-top: 56px;
+  padding-left: 90px;
+}
 
-  .table > tbody > tr > td {
-    padding: 12px 8px;
-    vertical-align: middle;
-    border-color: #ddd;
-    font-weight: 300;
-    font-size: 14px;
-    color: #3c4858;
+@media (min-width: 768px) {
+  body.fixed-nav #content-wrapper {
+    padding-left: 225px;
   }
+}
 
-  .table .td-actions .btn {
-    margin: 0;
-    padding: 5px;
-  }
+.scroll-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 46px;
+}
 
-  .table .form-check {
-    margin: 0;
-    padding-left: 0;
-  }
+.scroll-to-top:focus, .scroll-to-top:hover {
+  color: white;
+}
 
-  .table .td-total {
-    font-weight: 500;
-    font-size: 17px;
-    padding-top: 20px;
-    text-align: right;
-  }
+.scroll-to-top:hover {
+  background: #343a40;
+}
 
-  .table .td-price {
-    font-size: 26px;
-    font-weight: 300;
-    margin-top: 5px;
-    text-align: right;
-  }
-  .table-shopping > thead > tr > th {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #555;
-  }
-  .table-shopping .td-name {
-    min-width: 200px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.42857143;
-  }
+.scroll-to-top i {
+  font-weight: 800;
+}
 
-  .table-shopping .td-name small {
-    color: #999;
-    font-size: 18px;
-    font-weight: 300;
-  }
+.smaller {
+  font-size: 0.7rem;
+}
 
-  .table-shopping .img-container {
-    width: 120px;
-    max-height: 160px;
-    overflow: hidden;
-    display: block;
-  }
+.o-hidden {
+  overflow: hidden !important;
+}
 
-  .table-shopping .img-container img {
-    width: 100%;
-  }
+.z-0 {
+  z-index: 0;
+}
 
-  .table-shopping > tbody > tr > td {
-    font-size: 14px;
-  }
+.z-1 {
+  z-index: 1;
+}
 
-  .table-shopping .td-number {
-    text-align: right;
-    min-width: 150px;
-    font-size: 18px;
-  }
+.navbar-nav .form-inline .input-group {
+  width: 100%;
+}
 
-  .table-shopping .td-number small {
-    margin-right: 3px;
-  }
-  .form-check {
-    padding-left: 0;
-  }
-  .form-check .form-check-label {
-    cursor: pointer;
-    padding-left: 0px;
-    position: relative;
-    margin-bottom: 0;
-  }
+.navbar-nav .nav-item.active .nav-link {
+  color: #fff;
+}
 
-  .form-check .form-check-label span {
-    display: block;
-    left: -1px;
-    top: -1px;
-    transition-duration: .2s;
-  }
+.navbar-nav .nav-item.dropdown .dropdown-toggle::after {
+  width: 1rem;
+  text-align: center;
+  float: right;
+  vertical-align: 0;
+  border: 0;
+  font-weight: 900;
+  content: '\f105';
+  font-family: 'Font Awesome 5 Free';
+}
 
-  .form-check .form-check-input {
-    opacity: 0;
-    height: 0;
-    width: 0;
-    overflow: hidden;
-    position: absolute;
-    margin: 0;
-    z-index: -1;
-    left: 0;
-    pointer-events: none;
-  }
+.navbar-nav .nav-item.dropdown.show .dropdown-toggle::after {
+  content: '\f107';
+}
 
-  .form-check .form-check-sign:before {
-    display: block;
-    position: absolute;
-    left: 0;
-    content: "";
-    background-color: rgba(0, 0, 0, .84);
-    height: 20px;
-    width: 20px;
-    border-radius: 100%;
-    z-index: 1;
-    opacity: 0;
-    margin: 0;
-    top: 0;
-    transform: scale3d(2.3, 2.3, 1);
-  }
+.navbar-nav .nav-item.dropdown.no-arrow .dropdown-toggle::after {
+  display: none;
+}
 
-  .form-check .form-check-sign .check {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 1px solid rgba(0, 0, 0, .54);
-    overflow: hidden;
-    z-index: 1;
-    border-radius: 3px;
-    top: 3px;
-  }
+.navbar-nav .nav-item .nav-link:focus {
+  outline: none;
+}
 
-  .form-check .form-check-sign .check:before {
-    position: absolute;
-    content: "";
-    transform: rotate(45deg);
-    display: block;
-    margin-top: -3px;
-    margin-left: 7px;
-    width: 0;
-    color: #fff;
-    height: 0;
-    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, inset 0 0 0 0;
-    animation: checkbox-off .3s forwards;
-  }
+.navbar-nav .nav-item .nav-link .badge {
+  position: absolute;
+  margin-left: 0.75rem;
+  top: 0.3rem;
+  font-weight: 400;
+  font-size: 0.5rem;
+}
 
-  .form-check .form-check-input:checked + .form-check-sign .check:before {
-    color: #fff;
-    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
-    animation: checkbox-on .3s forwards;
+@media (min-width: 768px) {
+  .navbar-nav .form-inline .input-group {
+    width: auto;
   }
+}
 
-  .form-check .form-check-input:checked + .form-check-sign .check {
-    background: #9c27b0;
-  }
+.card-body-icon {
+  position: absolute;
+  z-index: 0;
+  top: -1.25rem;
+  right: -1rem;
+  opacity: 0.4;
+  font-size: 5rem;
+}
 
-  .table .form-check .form-check-sign {
-    top: -13px;
-    left: 0;
-    padding-right: 0;
+@media (min-width: 576px) {
+  .card-columns {
+    -webkit-column-count: 1;
+    column-count: 1;
   }
+}
 
-  .table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: #f9f9f9 !important;
+@media (min-width: 768px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    column-count: 2;
   }
-  footer {
-    width: 100%;
-    margin-top: 200px;
-    color: #555;
-    background: #fff;
-    padding: 25px;
-    font-weight: 300;
-    display: block;
-    position: absolute;
-    float: left;
-    vertical-align: middle;
-  }
+}
 
-  .footer p {
-    margin-bottom: 0;
+@media (min-width: 1200px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    column-count: 2;
   }
-  footer p a {
-    color: #555;
-    font-weight: 400;
-  }
+}
 
-  footer p a:hover {
-    color: #9f26aa;
-    text-decoration: none;
+:root {
+  --input-padding-x: 0.75rem;
+  --input-padding-y: 0.75rem;
+}
+
+.card-login {
+  max-width: 25rem;
+}
+
+.card-register {
+  max-width: 40rem;
+}
+
+.form-label-group {
+  position: relative;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+  height: auto;
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+footer.sticky-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - 90px);
+  height: 80px;
+  background-color: #e9ecef;
+}
+
+footer.sticky-footer .copyright {
+  line-height: 1;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  footer.sticky-footer {
+    width: calc(100% - 225px);
   }
 }

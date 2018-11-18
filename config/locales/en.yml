@@ -3,10 +3,20 @@ en:
   page_title:         '%{title}'
   default_page_title: Stock productivity calculator
 
+  time:
+    formats:
+      date: "%m/%d/%Y"
+
   layouts:
     navbar:
       root_link: Stock productivity calculator
       log_out:   Log out
+
+  modal:
+    logout:
+      ready_to_leave: Ready to Leave?
+      logout:         Select 'Logout' below if you are ready to end your current session.
+      cancel:         Cancel
 
   home:
     index:
@@ -16,13 +26,16 @@ en:
       no_account:         I have no account
       sign_in:            Sign in
       get_started:        Get started with your free account
+      last_stock:         Your last stock chart
 
   stocks:
     index:
+      create_stock:         Create Stock
       actions:              Actions
       your_stocks:          Your Stocks
       successfully_deleted: Successfully deleted
       account:              'Account: %{account}'
+      last_update:          'Last update: %{date}'
 
     create:
       successfully_created: Stock saved

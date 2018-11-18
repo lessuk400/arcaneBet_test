@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-feature 'Stocks #index', js: true do
+feature 'Stocks #show', js: true do
   let(:user)       { create(:user) }
   let!(:stock)     { create_list(:stock, 3, user: user) }
   let(:last_stock) { user.stocks.first.decorate }
@@ -26,13 +26,15 @@ feature 'Stocks #index', js: true do
     end
 
     scenario 'shows sign out page' do
-      expect(page).to have_link('Log out', href: '/users/sign_out')
+      find('#userDropdown').click
+
+      expect(page).to have_link('Log out')
     end
   end
 
   context 'when user is not signed in' do
     scenario 'does not show sign out page' do
-      expect(page).to have_no_link('Log out', href: '/users/sign_out')
+      expect(page).to have_no_css('#userDropdown')
     end
   end
 end
